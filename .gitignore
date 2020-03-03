@@ -1,0 +1,5 @@
+# Project exclude paths
+/enl-common/target/
+/enl-flume/target/
+/enl-kafka/target/
+/enl-resources/target/
