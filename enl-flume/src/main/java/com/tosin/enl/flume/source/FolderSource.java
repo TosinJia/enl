@@ -1,5 +1,6 @@
 package com.tosin.enl.flume.source;
 
+import com.tosin.enl.flume.constant.ConstantFields;
 import org.apache.commons.io.FileUtils;
 import org.apache.flume.Context;
 import org.apache.flume.Event;
@@ -80,8 +81,8 @@ public class FolderSource extends AbstractSource implements Configurable, Pollab
                             //设置消息头。可以设置一些说明，参数之类
                             //可以把当前文件和 移动之后存放的地址传送到channel
                             Map headersMap = new HashMap();
-                            headersMap.put("file", filename);
-                            headersMap.put("absolute_filename", destFilePathName);
+                            headersMap.put(ConstantFields.FILE_NAME, filename);
+                            headersMap.put(ConstantFields.ABSOLUTE_PATH, destFilePathName);
                             e.setHeaders(headersMap);
                             getChannelProcessor().processEvent(e);
 
