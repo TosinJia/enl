@@ -13,6 +13,7 @@
         <module>enl-common</module>
         <module>enl-flume</module>
         <module>enl-kafka</module>
+        <module>enl-spark</module>
     </modules>
 
     <properties>
