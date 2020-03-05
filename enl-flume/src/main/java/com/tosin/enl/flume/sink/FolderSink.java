@@ -7,23 +7,17 @@ import org.apache.flume.sink.AbstractSink;
 import org.apache.log4j.Logger;
 
 /**
- * http://flume.apache.org/releases/content/1.9.0/FlumeDeveloperGuide.html#sink
+ * MySink1
  *
  */
-public class MySink extends AbstractSink implements Configurable {
-    private static Logger LOG = Logger.getLogger(MySink.class);
+public class FolderSink extends AbstractSink implements Configurable {
+    private static final Logger LOG = Logger.getLogger(FolderSink.class);
 
-    private String myProp;
     private String topic;
 
     @Override
     public void configure(Context context) {
-        String myProp = context.getString("myProp", "defaultValue");
-
-        // Process the myProp value (e.g. validation)
-
-        // Store myProp for later retrieval by process() method
-        this.myProp = myProp;
+        topic = context.getString("topic");
     }
 
     @Override
