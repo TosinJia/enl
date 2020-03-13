@@ -14,6 +14,7 @@
         <module>enl-flume</module>
         <module>enl-kafka</module>
         <module>enl-spark</module>
+        <module>enl-es</module>
     </modules>
 
     <properties>
